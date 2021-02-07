@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Aux from "../../hoc/Auxillary";
-// import Burger from "../../components/Burger/Burger";
+import BuildControl from '../../components/Burger/BuildControls/BuildControl';
 import Burger from "../../components/Burger/Burger";
 
 
@@ -10,6 +10,7 @@ class BurgerBuilder extends Component {
         return (
             <Aux>
                 <Burger></Burger>
+                <BuildControl></BuildControl>
                 <div>Build Controls</div>
             </Aux>
         );

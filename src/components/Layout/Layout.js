@@ -12,7 +12,7 @@ const layout = (props) => (
         <main className={classes.Content}>
             {props.children}
         </main>
-        {/* <Burger></Burger> */}
+        <BurgerBuilder></BurgerBuilder>
     </Aux>
 
 );
