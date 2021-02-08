@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import BurgerBuilder from './containers/BurgerBuilder/BurgerBuilder';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    {/* <BurgerBuilder></BurgerBuilder> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

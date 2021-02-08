@@ -1,10 +1,10 @@
 import React from "react";
 
-// import classes from "./Burger.module.css";
+import classes from "./BuildControl.module.css";
 
 const buildControl = (props) => {
     return (
-        <div>
+        <div className={classes.BuildControl}>
             <button>Less</button>
             <button>More</button>
             <div>Ingredient</div>
