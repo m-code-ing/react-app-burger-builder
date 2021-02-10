@@ -31,3 +31,14 @@ A: Manage this with connecting to the state present in the BurgerBuilder.js file
 	a: - use the Object.key on ingredients object and convert it into an array using the .map function.. and then reduce this array using the .reduce to calculate the sum of ingredients.. if sum is more than 0.. then make 'puchaseable: true'
 	Remarks: Course Solution is similar.. with few additions..
 		- made a function 'updatePurchaseState(ingredients)' in BurgerBuilder.js... which returns the above mentioned sum in my solution..  called this function 'updatePurchaseState' passed updatedIngredients by passing updatedIngredients from addIngredientsHandler and removeIngredientsHandler functions (made to add and remove ingredietns.. and therefore connect the state of the purchaseable property of state to adding and removing ingredients and therefore the state of the OrderNow button).
+
+
+Lecture 137: Creating the Order Summary Modal
+Q: Open a Modal on clicking the ORDER NOW button
+A: 
+	- we need to create a Modal and a Backdrop.. Modal should open on clicking OrderNow button.. and Modal should close on clicking on the Backdrop.. 
+
+	- Create two reUsable component Modal and Backdrop.. both in a new UserInterface or UI folder within the Layout Folder..
+
+	-.... following the course for this one.. 
+
