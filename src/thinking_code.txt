@@ -1,0 +1,33 @@
+Lecture 134 : Make sure if there is no ingredients then remove ingredients doesnt work:
+
+
+- check the state in Burger Builder.. if this.state.ingredients[type] is 0.. then do not execute the code in the removeIngredientHandler funciton... 
+THIS CODE WORKS...!!
+
+
+: Disable less button if there is not ingredients of that type..
+
+- you want a disabled = true attribute in the Less button.. so.. set disabled = props.boolean...
+- this boolean can be passed from the state in the BurgerBuilder to the Less button in the  BuildControl.js file..
+	THIS DID NOT WORK.. NEEDS SOME TWEAKING.. 
+	- Solution : we need to make a copy of the this.state.ingredients object.. and convert it to ingredient[type] = true/false.. this is to be done within the render method.. and then pass this reference of object to the Less button in the BuildControl.js file.
+
+
+Lecture 135: Displaying Burger Price
+Problem: display price of burger
+Solution : 
+	- we have the the totalPrice in state of the BurgerBuilder.. pass this totalPrice to the BuildControls and show it there.. 
+Result : THIS CODE WORKS..!
+
+
+Lecture 136: Adding the Order Button
+Q: Add the checkout/OrderNow button in the BuildControl.
+A: Just add a button in the BuildControls.js file
+
+Q: Make the checkout/OrderNow button disabled.. and enable only when there are ingredients.
+A: Manage this with connecting to the state present in the BurgerBuilder.js file.. add a property 'purchasable: false' in the state.. and if any ingredients is more than 0.. then make 'puchaseable: true.'
+
+	q: - how to check if there is any ingredients, i.e., there is atleast one ingredient present in the this.state.ingredietns object...
+	a: - use the Object.key on ingredients object and convert it into an array using the .map function.. and then reduce this array using the .reduce to calculate the sum of ingredients.. if sum is more than 0.. then make 'puchaseable: true'
+	Remarks: Course Solution is similar.. with few additions..
+		- made a function 'updatePurchaseState(ingredients)' in BurgerBuilder.js... which returns the above mentioned sum in my solution..  called this function 'updatePurchaseState' passed updatedIngredients by passing updatedIngredients from addIngredientsHandler and removeIngredientsHandler functions (made to add and remove ingredietns.. and therefore connect the state of the purchaseable property of state to adding and removing ingredients and therefore the state of the OrderNow button).
