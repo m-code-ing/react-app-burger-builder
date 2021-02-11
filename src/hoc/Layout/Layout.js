@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-import Aux from '../Auxillary';
+import Aux from '../Auxillary/Auxillary';
 
 import BurgerBuilder from '../../containers/BurgerBuilder/BurgerBuilder';
 import classes from './Layout.module.css';
