@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 
 import Aux from '../Auxillary/Auxillary';
 
-import BurgerBuilder from '../../containers/BurgerBuilder/BurgerBuilder';
+// import BurgerBuilder from '../../containers/BurgerBuilder/BurgerBuilder';
 import classes from './Layout.module.css';
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
@@ -30,7 +30,6 @@ class Layout extends Component {
                 <SideDrawer open={this.state.showSideDrawer} closed={this.sideDrawerClosedHandler}></SideDrawer>
                 <main className={classes.Content}>
                     {this.props.children}
-                    <BurgerBuilder></BurgerBuilder>
                 </main>
             </Aux>
         )

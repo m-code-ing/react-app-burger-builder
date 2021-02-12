@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import classes from './Modal.module.css';
-import Aux from '../../../Auxillary/Auxillary';
+import Aux from '../../../hoc/Auxillary/Auxillary';
 import Backdrop from '../Backdrop/Backdrop';
 
 
@@ -15,8 +15,8 @@ class Modal extends Component {
 		console.log('Modal will update');
 	}
 
-
 	render() {
+		console.log(this.props.show);
 		return (
 			<Aux>
 				<Backdrop
