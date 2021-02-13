@@ -27,14 +27,14 @@ const withErrorHandler = (WrappedComponent, axios) => {
         
 
         errorConfirmedHandler = () => {
-            console.log("hello");
+            // console.log("hello");
             this.setState({error: null})
             
         }
         
 
         render() {
-            console.log('From withErrorHandler : ' , this.state.error);
+            // console.log('From withErrorHandler : ' , this.state.error);
             return (
                 < Aux >
                     <Modal 
