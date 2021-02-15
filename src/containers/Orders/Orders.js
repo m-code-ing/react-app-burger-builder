@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import Order from '../../components/Order/Order';
 import axios from '../../axios-orders';
-import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
+// import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler'; commented this as this is not working.. see previous commit message
 import Modal from '../../components/UI/Modal/Modal';
 
 class Orders extends Component {
@@ -36,11 +36,16 @@ class Orders extends Component {
                     modalClosed={this.errorConfirmedHandler}>
                     {this.state.error ? this.state.error.message : null}
                 </Modal>
-                <Order></Order>
-                <Order></Order>
+                {this.state.orders.map((order) => {
+                    return <Order 
+                    key={order.key}
+                    ingredients={order.ingredients}
+                    price={order.price}
+                     />
+                })}
             </div>
         )
     }
 }
 
-export default withErrorHandler(Orders, axios);
+export default Orders;
